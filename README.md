@@ -1,0 +1,1 @@
+# test_vue_easy_sample

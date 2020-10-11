@@ -29,6 +29,3 @@ Vue.config.devtools = true;
 
 // ■Vueパネル
 // VueDevToolsはChromeの拡張機能を入れると使えるようになる。
-
-
-

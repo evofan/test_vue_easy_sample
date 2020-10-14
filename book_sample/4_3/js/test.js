@@ -1,4 +1,4 @@
-﻿console.log("test4-2");
+﻿console.log("test4-3 v-else-if");
 
 const app = new Vue({
     el: '#app',
@@ -16,10 +16,15 @@ const app = new Vue({
         }
     },
     computed: {
-        isPass: function () {
+        isRankA: function () {
             return this.count >= 6
+        },
+        isRankB: function () {
+            return this.count >= 0
         }
     }
 });
 
 Vue.config.devtools = true;
+
+// サンプルのHTML内に式を書く方法→関数呼び出し

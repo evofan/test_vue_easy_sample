@@ -1,0 +1,44 @@
+﻿<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="form-area__name">
+        <p>名前</p>
+        <input type="text" name="name" v-model="name" />
+        <p v-if="isInvalidName" class="error">
+          名前は4文字以上で入力して下さい。
+        </p>
+      </div>
+      <div class="form-area__tel">
+        <p>電話番号</p>
+        <input type="tel" name="tel" v-model="tel" />
+        <p v-if="isInvalidTel" class="error">
+          電話番号は数字8文字以上で入力して下さい。
+        </p>
+      </div>
+      <div class="form-area__email">
+        <p>Eメールアドレス</p>
+        <input type="text" name="email" v-model="email" />
+        <p v-if="isInvalidEmail" class="error">
+          Eメールアドレスの形式で入力して下さい。
+        </p>
+      </div>
+      <p>
+        &nbsp;<br />v-modelを使わない疑似的な双方向バインディング<br /><span
+          class="blue"
+          >入力データを加工したい、入力データを使ってリアルタイムで他の処理をしたい場合に有効。</span
+        >
+      </p>
+      <input type="text" v-on:input="setText" :value="text" />
+      <p>{{text}}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+  </body>
+</html>

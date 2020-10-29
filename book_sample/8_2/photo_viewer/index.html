@@ -1,0 +1,31 @@
+﻿<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="wrap">
+        <image-thumbnail
+          v-for="(img, i) in images"
+          :key="i"
+          :path="img.path"
+          @clickimage="onSelectImage(img.path)"
+        ></image-thumbnail>
+        <transition name="fade">
+          <!--transitionはVue側で自動でアニメーションする-->
+          <modal
+            :is-shown="isShown"
+            :image-path="selectedImage"
+            @close="closeModal"
+          ></modal>
+        </transition>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+  </body>
+</html>

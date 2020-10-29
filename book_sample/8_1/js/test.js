@@ -7,7 +7,7 @@ const anyComponent = Vue.component("any-component", { // ★コンポーネン�
             title: "Hello, Component"
         }
     },
-    template: '<div class="title-label">{{ title }}</div>' // ★Vueインスタンスの時は無かったので注意
+    template: `<div class="title-label">{{ title }}</div>` // ★Vueインスタンスの時は無かったので注意
 });
 
 // test.js:7 Uncaught ReferenceError: Cannot access 'anyComponent' before initialization

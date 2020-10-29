@@ -11,6 +11,7 @@ show Vue DevTools
 
 <img src="https://evofan.github.io/test_vue_easy_sample/screenshot/pic_use_vue_devtools2.jpg" width="50%">  
 
+<img src="https://evofan.github.io/test_vue_easy_sample/screenshot/pic_viewer1.jpg" width="50%">  
 
 reference  
 
